@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import FeaturesSection from "./components/FeaturesSection";
 import ChartSection from "./components/ChartSection";
 import RoadMap from "./components/RoadMap";
+import TestimonialSection from "./components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
         <HeroSection/>
         <FeaturesSection/>
         <ChartSection/>
-        <RoadMap/>
+        <RoadMap /> 
+        <TestimonialSection />
       </div>
      
 

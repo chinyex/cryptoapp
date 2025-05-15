@@ -120,13 +120,13 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 p-4 space-y-4">
+        <div className="fixed right-4 top-20 w-60 bg-[#14102C] text-[#b5b3bc] rounded-lg shadow-lg p-4 space-y-4 z-50 md:hidden transition-all duration-300">
           {menuItems.map((item, index) => (
             <div key={index} className="relative">
               {!item.dropdown ? (
                 <Link
                   href={item.link}
-                  className="block text-gray-500 hover:text-green-300 transition-all py-2"
+                  className="block hover:text-white transition-all py-2"
                 >
                   {item.name}
                 </Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={() => togglePages(index)}
-                    className="flex items-center justify-between w-full text-gray-500 hover:text-green-300 transition-all py-2"
+                    className="flex items-center justify-between w-full hover:text-white transition-all py-2"
                   >
                     {item.name}
                     <ChevronDown
@@ -150,7 +150,7 @@ const Navbar = () => {
                         <li key={subIndex}>
                           <Link
                             href={subItem.link}
-                            className="block text-gray-400 hover:text-green-300 transition-all py-1"
+                            className="block text-[#b5b3bc] hover:text-white transition-all py-1"
                           >
                             {subItem.name}
                           </Link>

@@ -1,6 +1,6 @@
 import React from "react";
-import { ArrowUp  } from "lucide-react";
-import { Bitcoin } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
 import Image from "next/image";
 
 const roadmapData = [
@@ -60,9 +60,56 @@ const roadmapData = [
   },
 ];
 
+const teamMembers = [
+  {
+    name: "Matheus Ferrero",
+    role: "Marketing Expert",
+    image: "/M00.webp",
+    socials: [
+      { icon: Facebook, url: "/" },
+      { icon: Linkedin, url: "" },
+      { icon: Twitter, url: "" },
+      { icon: Youtube, url: "/" },
+    ],
+  },
+  {
+    name: "Eva Hudson",
+    role: "Blockchain Developer",
+    image: "/M01.webp",
+    socials: [
+      { icon: Facebook, url: "/" },
+      { icon: Linkedin, url: "" },
+      { icon: Twitter, url: "" },
+      { icon: Youtube, url: "/" },
+    ],
+  },
+  {
+    name: "Jackie Sanders",
+    role: "Creative Designer",
+    image: "/M02.webp",
+    socials: [
+      { icon: Facebook, url: "/" },
+      { icon: Linkedin, url: "" },
+      { icon: Twitter, url: "" },
+      { icon: Youtube, url: "/" },
+    ],
+  },
+  {
+    name: "Patrick Dorgu",
+    role: "SEO Expert",
+    image: "/M03.webp",
+    socials: [
+      { icon: Facebook, url: "/" },
+      { icon: Linkedin, url: "" },
+      { icon: Twitter, url: "" },
+      { icon: Youtube, url: "/" },
+    ],
+  },
+];
+
 const RoadMap = () => {
   return (
-    <section>
+    <section >
       <div className="text-center justify-center items-center p-6">
         <span className="font-semibold text-[#C5FF4A] text-xl md:text-2xl">
           ROADMAP
@@ -112,8 +159,7 @@ const RoadMap = () => {
                     width={16}
                     height={16}
                   />
-                  <span className
-                  ="text-sm">{item.coinLabel}</span>
+                  <span className="text-sm">{item.coinLabel}</span>
                   <span className="text-xs text-green-500 flex items-center gap-1">
                     {item.percentage}
                     <ArrowUp className="text-[10px]" />
@@ -126,16 +172,52 @@ const RoadMap = () => {
       </section>
 
       {/* Team Section */}
-      <section>
-      <div className="text-center justify-center items-center p-6">
-        <span className="font-semibold text-[#C5FF4A] text-xl md:text-2xl">
-        OUT TEAM
-        </span>
-        <h4 className="text-3xl md:text-4xl font-bold">Meet out Team</h4>
-        <p className="mt-4 text-[#b5b3bc] text-lg md:text-xl md:w-[60%] mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel.
-        </p>
-      </div>
+      <section className="max-w-7xl mx-auto text-center">
+        <div className="text-center justify-center items-center p-6">
+          <span className="font-semibold text-[#C5FF4A] text-xl md:text-2xl">
+            OUT TEAM
+          </span>
+          <h4 className="text-3xl md:text-4xl font-bold">Meet out Team</h4>
+          <p className="mt-4 text-[#b5b3bc] text-lg md:text-xl md:w-[60%] mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
+            congue arcu, In et dignissim quam condimentum vel.
+          </p>
+        </div>
+
+        <div className="bg-[#14102C] py-16 px-4 md:px-8 lg:px-5">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-[#131b4d] rounded-lg overflow-hidden text-white p-6 transition-all duration-300 border-b-4 border-transparent hover:border-myGreen"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-60 object-cover rounded-md mb-4"
+                  />
+                  <h3 className="text-xl font-semibold">{member.name}</h3>
+                  <p className="text-sm text-[#b5b3bc]">{member.role}</p>
+
+                  <div className="flex gap-3 mt-4 justify-center">
+                    {member.socials.map((social, i) => (
+                      <a
+                        key={i}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-white text-[#14102c] hover:bg-myGreen hover:text-white transition"
+                      >
+                        <social.icon size={16} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
     </section>
   );
