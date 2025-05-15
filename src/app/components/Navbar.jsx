@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex justify-between items-center p-4 bg-gray-900 shadow-md fixed top-0 left-0 right-0 z-10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#131b4d]/80 backdrop-blur-md shadow-md p-4 flex justify-between items-center">
         <Image src={"/logo-white.svg"} alt="Logo" width={100} height={50} />
 
         {/* PC nav menuItems */}
@@ -47,7 +47,7 @@ const Navbar = () => {
               {!item.dropdown ? (
                 <Link
                   href={item.link}
-                  className="text-gray-500 hover:text-green-300 transition-all"
+                  className="text-gray-500 hover:text-[#C5FF4A] transition-all"
                 >
                   {item.name}
                 </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={() => togglePages(index)}
-                    className="flex items-center gap-1 text-gray-500 hover:text-green-300 transition-all"
+                    className="flex items-center gap-1 text-gray-500 hover:text-green-300  transition-all"
                   >
                     {item.name}
                     <ChevronDown
@@ -97,7 +97,7 @@ const Navbar = () => {
           </div>
 
           {/* Sign In Button */}
-          <button className="rounded-full border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-green-300 p-3 px-8 md:block hidden transition-all">
+          <button className="rounded-full border border-white hover:text-[#C5FF4A] hover:bg-white d p-3 px-8 md:block hidden transition-all font-bold">
             Sign in
           </button>
 
@@ -163,7 +163,6 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        
       )}
     </div>
   );
