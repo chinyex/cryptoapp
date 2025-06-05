@@ -35,12 +35,13 @@ const testimonialsData = [
 const TestimonialSection = () => {
   return (
     <>
+    
       <div className="bg-[#14102c] py-16">
         <div className="text-center justify-center items-center p-6">
           <h3 className="font-semibold text-[#C5FF4A] text-xl md:text-2xl">
             TESTIMONIALS
           </h3>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3">
+          <h2 className="text-white text-3xl md:text-4xl font-bold mt-3">
             What Our Client Say's
           </h2>
           <p className="mt-4 text-[#b5b3bc] text-lg md:text-xl md:w-[60%] mx-auto">
@@ -60,11 +61,11 @@ const TestimonialSection = () => {
                   alt={testimonial.name}
                   className="w-20 h-16 rounded-md object-cover"
                 />
-                <div>
-                  <h3 className="font-semibold text-xl leading-tight">
+                <div >
+                  <h3 className="font-semibold text-xl leading-tight text-white">
                     {testimonial.name}
                   </h3>
-                  <p className="font-medium">{testimonial.position}</p>
+                  <p className=" text-[#b5b3bc]">{testimonial.position}</p>
                 </div>
               </div>
               <p className="mt-4 text-[#b5b3bc] text-md md:text-lg ">

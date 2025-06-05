@@ -67,8 +67,8 @@ const teamMembers = [
     image: "/M00.webp",
     socials: [
       { icon: Facebook, url: "/" },
-      { icon: Linkedin, url: "" },
-      { icon: Twitter, url: "" },
+      { icon: Linkedin, url: "/" },
+      { icon: Twitter, url: "/" },
       { icon: Youtube, url: "/" },
     ],
   },
@@ -109,12 +109,12 @@ const teamMembers = [
 
 const RoadMap = () => {
   return (
-    <section >
+    <section id="roadmap">
       <div className="text-center justify-center items-center p-6">
         <span className="font-semibold text-[#C5FF4A] text-xl md:text-2xl">
           ROADMAP
         </span>
-        <h4 className="text-3xl md:text-4xl font-bold">The Timeline</h4>
+        <h4 className="text-3xl md:text-4xl font-bold text-white">The Timeline</h4>
         <p className="mt-4 text-[#b5b3bc] text-base md:text-lg md:w-[50%] mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
           congue arcu, In et dignissim quam condimentum vel.
@@ -177,7 +177,7 @@ const RoadMap = () => {
           <span className="font-semibold text-[#C5FF4A] text-xl md:text-2xl">
             OUT TEAM
           </span>
-          <h4 className="text-3xl md:text-4xl font-bold">Meet out Team</h4>
+          <h4 className="text-3xl md:text-4xl font-bold text-white">Meet out Team</h4>
           <p className="mt-4 text-[#b5b3bc] text-lg md:text-xl md:w-[60%] mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
             congue arcu, In et dignissim quam condimentum vel.
@@ -207,7 +207,7 @@ const RoadMap = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-white text-[#14102c] hover:bg-myGreen hover:text-white transition"
+                        className="p-2 rounded-full bg-white text-[#14102c] hover:bg-[#C5FF4A] hover:text-black transition"
                       >
                         <social.icon size={16} />
                       </a>

@@ -13,11 +13,11 @@ const HeroSection = () => {
     <>
       <section className="p-4 py-36 max-w-[800px] mx-auto  ">
         <div className="">
-          <h1 className="text-3xl md:text-5xl font-bold text-center flex flex-col items-center justify-center">
+          <h1 className="text-white text-3xl md:text-5xl font-bold text-center flex flex-col items-center justify-center">
             Next.js Template and Boilerplate for Crypto, ICO and Web3
           </h1>
           <p
-            className="text-center pt-6 text-lg p-8
+            className="text-center pt-6 text-lg p-8 text-white
           "
           >
             A Next.js website template for Crypto Currency, Blockchain, ICO, and

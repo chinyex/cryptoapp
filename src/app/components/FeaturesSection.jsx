@@ -40,12 +40,12 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-10">
+    <section id="features" className="py-10">
       <div className="flex flex-col items-center justify-center p-4 text-center max-w-[650px] mx-auto">
         <span className="text-[#C5FF4A] font-semibold text-lg md:text-2xl">
           CRYPTO FEATURE
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold leading-tight ">
+        <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white">
           Best Features
         </h2>
         <p className="text-[#b5b3bc] text-lg md:text-xl pt-2  ">
@@ -67,7 +67,7 @@ const FeaturesSection = () => {
               height={50}
               className="mx-auto mb-4 rounded-full"
             />
-            <h3 className="text-xl sm:text-3xl lg:text-xl xl:text-3xl font-bold mb-2">{feature.title}</h3>
+            <h3 className="text-xl sm:text-3xl lg:text-xl xl:text-3xl font-bold mb-2 text-white">{feature.title}</h3>
             <p className="text-[#b5b3bc] text-base font-medium sm:text-lg lg:text-base xl:text-lg">{feature.description}</p>
           </div>
         ))}

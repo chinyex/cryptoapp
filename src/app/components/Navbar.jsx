@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const menuItems = [
   { name: "Home", link: "/" },
-  { name: "Features", link: "/features" },
-  { name: "RoadMap", link: "/roadmap" },
+  { name: "Features", link: "#features" },
+  { name: "RoadMap", link: "#roadmap" },
   {
     name: "Pages",
     link: "#",
@@ -47,7 +47,7 @@ const Navbar = () => {
               {!item.dropdown ? (
                 <Link
                   href={item.link}
-                  className="text-gray-500 hover:text-[#C5FF4A] transition-all"
+                  className="text-[#b5b3bc] hover:text-white font-semibold text-lg transition-all"
                 >
                   {item.name}
                 </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={() => togglePages(index)}
-                    className="flex items-center gap-1 text-gray-500 hover:text-green-300  transition-all"
+                    className="flex items-center gap-1 text-[#b5b3bc] hover:text-white font-semibold text-lg  transition-all"
                   >
                     {item.name}
                     <ChevronDown
@@ -97,9 +97,9 @@ const Navbar = () => {
           </div>
 
           {/* Sign In Button */}
-          <button className="rounded-full border border-white hover:text-[#C5FF4A] hover:bg-white d p-3 px-8 md:block hidden transition-all font-bold">
+          <Link href="/signIn" className="rounded-full border border-white text-white  hover:bg-[#C5FF4A] d p-3 px-8 md:block hidden transition-all font-bold">
             Sign in
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
