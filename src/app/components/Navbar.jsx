@@ -106,7 +106,7 @@ const Navbar = () => {
             onClick={toggleMenu}
             className={`p-2 rounded-lg ${
               isOpen ? "border-2 border-green-300" : ""
-            } dark:hover:bg-gray-700 md:hidden`}
+            } text-white md:hidden`}
             aria-label="Toggle menu"
           >
             {isOpen ? (
